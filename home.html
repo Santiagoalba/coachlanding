@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Exo:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css"> <!-- SWIPER LINK -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>A-typical</title>
+</head>
+<body>
+    <nav class="navbar">
+
+        <div class="navbar_logo">
+            <span>A-T</span>
+        </div>
+        <div class="navbar_items">
+            <ul>
+                <li>Our Coachs</li>
+                <li>Games</li>
+                <li>Sign In</li>
+                <li>Log In</li>
+            </ul>
+        </div>
+        <div class="navbar_cta">
+            <button>Start!</button>
+        </div>
+
+    </nav>
+
+    <div class="main">
+        <div class="main_grid">
+            <span>A-typical</span>
+            <p>Become better at your favourite e-sport!</p>
+        </div>
+        <div class="main_grid">
+            <p>Become a member</p>
+            
+        </div>
+
+    </div>
+    <div class="stamp">
+        <p>Get coached by the Pros!</p>
+    </div>
+
+    <!-- <div class="triangle"></div> -->
+
+    <div class="skills">
+        <div class="skills_card cardAnimation1">
+            <img src="image/film.png" alt="">
+            <H1>Replay Analysis</H1>
+            <p>Not only you will be coached during your games but also be able to watch the replays with your coach to analize what you excel at and your most common mistakes</p>
+        </div>
+        <div class="skills_card cardAnimation1">
+            <img src="image/trophy.png" alt="">
+            <H1>Basic to Advanced!</H1>
+            <p>Coachs are prepared for every situation, from teaching a new player to get into the game to teaching you advanced strategies on how to rank up</p>
+        </div>
+        <div class="skills_card cardAnimation2">
+            <img src="image/megaphone.png" alt="">
+            <H1>One on One</H1>
+            <p>Our lessons are one on one which means your coach will be focused on your skills and your mistakes and will make you better at those areas based on his game knowledge</p>
+        </div>
+        <div class="skills_card cardAnimation2">
+            <img src="image/people.png" alt="">
+            <H1>Professional Coach</H1>
+            <p>You can be coached by one of the best pro players at your favourite e-sports!</p>
+        </div>
+    </div>
+
+    
+
+    <div class="swiper-container">
+        
+        <div class="swiper-wrapper">
+            <div class="effect"></div>
+           <div class="swiper-slide slideOne">
+               <div class="slider_info">
+                    <img src="image/lol.png" alt="">
+                    <p>Prepare yourself to become better at the Summoners Rift with some of the best player or professional team coachs that will give you their insigth in one of the most popular games around the globe</p>
+               </div>
+               <div class="slider_button">
+                <button>BECOME A LEGEND</button>
+               </div>
+            </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <script src="../package/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+</body>
+</html>
