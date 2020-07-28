@@ -235,6 +235,12 @@
   height: 400px;
 }
 
+.swiper-wrapper .graph {
+  width: 80%;
+  position: absolute;
+  z-index: 1;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -268,16 +274,51 @@
       justify-content: space-around;
 }
 
+.slideOne:hover::before {
+  -webkit-animation-name: zoomImage;
+          animation-name: zoomImage;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes zoomImage {
+  from {
+  }
+  to {
+    -webkit-filter: none;
+            filter: none;
+    opacity: 0.5;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes zoomImage {
+  from {
+  }
+  to {
+    -webkit-filter: none;
+            filter: none;
+    opacity: 0.5;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
 .slideOne::before {
   content: '';
   top: 0px;
   right: 0px;
-  left: 0px;
   bottom: 0px;
   position: absolute;
-  background-image: url(../image/league.jpg);
+  background-image: url(../image/lol2.png);
   background-size: cover;
-  -webkit-filter: sepia(0.7) brightness(0.5);
-          filter: sepia(0.7) brightness(0.5);
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-position-x: 100px;
+  -webkit-filter: sepia(0.7) brightness(0.2);
+          filter: sepia(0.7) brightness(0.2);
 }
 /*# sourceMappingURL=home.css.map */

@@ -193,6 +193,12 @@ $swiper-title-color:#DAA520;
 
       .swiper-wrapper{
         
+
+        .graph{
+            width: 80%;
+            position: absolute;
+            z-index: 1;
+        }
       }
   
       .swiper-slide {
@@ -224,20 +230,46 @@ $swiper-title-color:#DAA520;
       }
 
       .slideOne{
+        
+        &:hover{
 
+            &::before{
 
+                animation-name: zoomImage;
+                animation-duration: 2s;
+
+                @keyframes zoomImage {
+                    from{
+                      
+                    }
+          
+                    to{
+                      filter: none;
+                      opacity: 0.5;
+                      transform: scale(0.8);
+                    }
+                  
+              }
+  
+            }
+            }
 
         &::before{
             content: '';
             top: 0px;
             right: 0px;
-            left: 0px;
             bottom: 0px;
             position: absolute;
-            background-image: url(../image/league.jpg);
+            background-image: url(../image/lol2.png);
             background-size: cover;
-            filter: sepia(0.7) brightness(0.5)
+            width: 60%;
+            display: flex;
+            background-position-x: 100px;
+            filter: sepia(0.7) brightness(0.2); 
 
-          
-        }
+            
+            }
+        
       }
+
+      
