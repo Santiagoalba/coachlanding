@@ -1,5 +1,5 @@
 
-$logo-font:'Dancing Script', cursive;
+$logo-font:'Orbitron', sans-serif;
 $main-font:'Exo', sans-serif;
 $main-color: white;
 $font-color: #6D7CFD;
@@ -7,79 +7,114 @@ $swiper-title-color:#DAA520;
 
 .navbar{
     display: flex;
-    background-color: $main-color;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: $main-color;
 
     .navbar_logo{
-        font-family: $logo-font;
-        font-size: 50px;
-        margin-left: 30px
+        margin: 10px 0;
+
+        span{
+            font-family: $logo-font;
+            font-size: 50px;
+        }
+        
     }
 
     .navbar_items{
         display: flex;
-        align-items: center;
-        margin-right: 10px;
-        margin-left: auto;
-        color: $font-color;
+        width: 100%;
+        background-color: #27272b;
+        justify-content: center;
         
         ul{
             display: flex;
+            align-items: center;
+            padding: 0px;
+            margin: 0px;
+            height: 50px;
+
+            .navbar_cta{
+
+                z-index: 2;
+                background-color: #dd5126;
+                padding: 5px 30px;
+                font-family: "Exo", sans-serif;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                border: 1px #dd5126 solid;
+                margin-left: 10px;
+            }
         }
 
         li{
             list-style: none;
             font-family: $main-font;
-            margin: 0px 10px;
+            display: flex;
+            align-items: center;
+            width: 100px;
+            justify-content: center;
+            height: 100%;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover{
+                
+                    animation-duration: 1s;
+                    animation-fill-mode:both;
+                    animation-name: navTransition;
+                }
+                
+                @keyframes navTransition{
+                    from{
+                        background-color: black;;
+                        color: white;
+                    }
+                    to{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+                 
+            }
+            
+            
+            }
         }
-    }
+    
 
-    .navbar_cta{
+.swiper-main{
+    height: 300px;
+}
 
-        display: flex;
-        align-items: center;
 
-        button{
-            padding: 7px;
-            font-size: 24px;
-            border-radius: 50px;
-            border: 1px black solid;
-            background-color: darkorange;
-            padding: 5px 30px;
-            font-family: $main-font;
-            font-weight: bold;
-            color: white;
-        }
+// .main{
+//     position: relative;
+//     display: grid;
+//     grid-template-columns: repeat(2 , 50%);
+//     height: 50vh;
+
+//     &::before{
+//         content: '';
+//         top: 0px;
+//         right: 0px;
+//         left: 0px;
+//         bottom: 0px;
+//         position: absolute;
+//         background-image: url(../image/mainbg.jpg);
+//         background-size: cover;
+//         opacity: 0.5;
         
-    }
-}
+//     }
 
+//     .main_grid{
 
-.main{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2 , 50%);
-    height: 50vh;
-
-    &::before{
-        content: '';
-        top: 0px;
-        right: 0px;
-        left: 0px;
-        bottom: 0px;
-        position: absolute;
-        background-image: url(../image/mainbg.jpg);
-        background-size: cover;
-        opacity: 0.5;
-        
-    }
-
-    .main_grid{
-
-        p{
-            color: $main-color;
-        }
-}
-}
+//         p{
+//             color: $main-color;
+//         }
+// }
+// }
 
 .stamp{
     display: flex;
@@ -202,74 +237,140 @@ $swiper-title-color:#DAA520;
       }
   
       .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        object-fit: cover;
-  
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+      }
+       
+  
+      
 
-        .slider_info{
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            margin-right: auto;
-            height: 100%;
-            justify-content: space-around;
-
-
+        .swiper-slide-base{
+            height: 400px;
         }
 
-        
-      }
-
-      .slideOne{
-        
-        &:hover{
-
-            &::before{
-
-                animation-name: zoomImage;
-                animation-duration: 2s;
-
-                @keyframes zoomImage {
-                    from{
-                      
-                    }
-          
-                    to{
-                      filter: none;
-                      opacity: 0.5;
-                      transform: scale(0.8);
-                    }
-                  
-              }
-  
-            }
-            }
-
-        &::before{
-            content: '';
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
+        .swiper-slide-info{
+            
+            width: 50%;
             position: absolute;
-            background-image: url(../image/lol2.png);
-            background-size: cover;
-            width: 60%;
+            height: 100%;
             display: flex;
-            background-position-x: 100px;
-            filter: sepia(0.7) brightness(0.2); 
+            flex-direction: column;
+            align-items: flex-start;
+            color: white;
+            padding: 20px 50px;
+            p{
+                z-index: 2;
+                width: 80%;
+                margin: 0px;
+                font-size: 20px;
+                font-family: $main-font;
+                
+            }
+
+            img{
+                z-index: 2;
+                margin: 50px 0;
+            }
+
+            button{
+                margin-top: 50px;
+                z-index: 2;
+                background-color: #dd5126;
+                padding: 10px 100px;
+                font-family: "Exo", sans-serif;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                border: 1px #dd5126 solid;
+            }
+        }
+        
+        
+
+        
+      
+
+    //   .slideOne{
+        
+    //     &:hover{
+
+    //         &::before{
+
+    //             animation-name: zoomImage;
+    //             animation-duration: 2s;
+
+    //             @keyframes zoomImage {
+    //                 from{
+                      
+    //                 }
+          
+    //                 to{
+    //                   filter: none;
+    //                   opacity: 0.5;
+    //                   transform: ;
+    //                 }
+                  
+    //           }
+  
+    //         }
+    //         }
+
+    //     &::before{
+    //         content: '';
+    //         top: 0px;
+    //         right: 0px;
+    //         bottom: 0px;
+    //         position: absolute;
+    //         background-image: url(../image/lol2.png);
+    //         background-size: cover;
+    //         width: 60%;
+    //         display: flex;
+    //         background-position-x: 100px;
+    //         filter: sepia(0.7) brightness(0.2); 
 
             
-            }
+    //         }
         
-      }
+    //   }
 
+    .slideOne{
+
+        &:hover .img{
+            transform: scale(0.7);
+            filter: grayscale(0) brightness(0.8);
+        }
+        
+         .slideOne .img{
+            
+            transition: transform 1s ease-in-out;
+            
+
+        }
+        
+        .graph{
+            z-index: 1;
+            height: 100%;
+            width: 70%;
+            left: 0px;
+            position: absolute;
+            
+        }
+        
+        .img{
+            top: -130px;
+            right: -350px;
+            position: absolute;
+            transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+            filter: grayscale(0.7) brightness(0.5);
+            
+
+             &:hover{
+                 transform: scale(0.7);
+             }
+        }
+         
+    }
+
+    
+    
       

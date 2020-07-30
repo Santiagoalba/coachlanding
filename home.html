@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Exo:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../package/swiper-bundle.min.css"> <!-- SWIPER LINK -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -17,7 +18,7 @@
     <nav class="navbar">
 
         <div class="navbar_logo">
-            <span>A-T</span>
+            <span>ATYPICAL</span>
         </div>
         <div class="navbar_items">
             <ul>
@@ -25,25 +26,41 @@
                 <li>Games</li>
                 <li>Sign In</li>
                 <li>Log In</li>
+                <button class="navbar_cta">Choose your master!</button>
             </ul>
+
+            <!-- <div class="navbar_cta">
+                <button>Start!</button>
+            </div> -->
+
         </div>
-        <div class="navbar_cta">
-            <button>Start!</button>
-        </div>
+        
 
     </nav>
 
-    <div class="main">
-        <div class="main_grid">
-            <span>A-typical</span>
-            <p>Become better at your favourite e-sport!</p>
+    <div>
+      <div class="swiper-main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
         </div>
-        <div class="main_grid">
-            <p>Become a member</p>
-            
-        </div>
-
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Add Arrows -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+      </div>
     </div>
+    
+
     <div class="stamp">
         <p>Get coached by the Pros!</p>
     </div>
@@ -78,15 +95,27 @@
     <div class="swiper-container">
         
         <div class="swiper-wrapper">
-            <img class="graph" src="image/Trazado.png" alt="">
+            
+
            <div class="swiper-slide slideOne">
-               <div class="slider_info"> 
-                    <p>Prepare yourself to become better at the Summoners Rift with some of the best player or professional team coachs that will give you their insigth in one of the most popular games around the globe</p>
+               <div class="swiper-slide-info">
+                    <img src="image/VALORANT.png" alt="" class="logo">
+                    <p>Learn how to grow in ladder or get better at the newest star in the fps e-sports scene "Valorant" with growing audience.</p>
+                    <button>BE A RADIANT</button>
                </div>
-               <div class="slider_button">
-                <button>BECOME A LEGEND</button>
-               </div>
+                
+                <div class="swiper-slide-base">
+                    <img src="image/Trazado.png" alt="" class="graph">
+                    <img src="image/valbig.png" class="img">
+                    
+                </div>
+                
+
+
             </div>
+
+
+
           <div class="swiper-slide">Slide 2</div>
           <div class="swiper-slide">Slide 3</div>
           <div class="swiper-slide">Slide 4</div>
@@ -110,6 +139,24 @@
             el: '.swiper-pagination',
           },
         });
+
+        var swiper2 = new Swiper('.swiper-main', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
       </script>
 </body>
 </html>
