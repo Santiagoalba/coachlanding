@@ -112,6 +112,52 @@
   height: 300px;
 }
 
+.swiper-main .swiper-slide img {
+  width: inherit;
+  -webkit-filter: blur(1.5px);
+          filter: blur(1.5px);
+}
+
+.swiper-main .swiper-text {
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 40px;
+}
+
+.swiper-main .swiper-text span {
+  font-family: "Orbitron", sans-serif;
+  font-size: 22px;
+}
+
+.swiper-main .swiper-text p {
+  width: 50%;
+  color: white;
+  font-family: "Exo", sans-serif;
+}
+
+.swiper-main .swiper-text h1 {
+  color: white;
+  font-family: "Exo", sans-serif;
+  font-size: 20px;
+}
+
+.swiper-main .swiper-text .sliderLine {
+  width: 40%;
+  height: 2px;
+  background-color: white;
+}
+
 .stamp {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,5 +411,85 @@
 .slideOne .img:hover {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80px 300px;
+      grid-template-rows: 80px 300px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  border: 3px yellow solid;
+  background-color: black;
+  color: white;
+}
+
+footer .logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 36px;
+}
+
+footer .contact {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+footer .games {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  justify-self: center;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+footer .games ul {
+  list-style: none;
+}
+
+footer .games ul li {
+  font-size: 18px;
+}
+
+footer .newsletter {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 /*# sourceMappingURL=home.css.map */
