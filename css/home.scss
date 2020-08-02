@@ -5,6 +5,10 @@ $main-color: white;
 $font-color: #6D7CFD;
 $swiper-title-color:#DAA520;
 
+body{
+    margin: 0;
+}
+
 .navbar{
     display: flex;
     flex-direction: column;
@@ -47,6 +51,23 @@ $swiper-title-color:#DAA520;
                 border: 1px #dd5126 solid;
                 margin-left: 10px;
             }
+
+            .games:hover  .dropdownGames{
+                display: block;
+                animation-name: fadeIn;
+                animation-duration: 1s;
+            }  
+            
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                 }
+                 100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                 }
+            }
         }
 
         li{
@@ -76,11 +97,56 @@ $swiper-title-color:#DAA520;
                         color: black;
                     }
                 }
-                 
+              
+                .dropdownGames{
+
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    top: 15.2%;
+                    right: 0;
+                    z-index: 3;
+                   
+
+                    .dropdownGames_grid{
+                        display: grid;
+                        grid-template-columns: repeat(7, 1fr);
+                        height: minmax(0 , auto);
+                        background-color: #27272b;
+                        
+        
+                        .dropdownGames_grid_item{
+                            padding: 10px;
+                            margin: 0px 10px;
+                            filter:grayscale(1) ;
+
+                            &:hover{
+                                animation: colored 1s forwards;
+                            }
+
+                            @keyframes colored {
+                                0%{
+                                    filter: grayscale(1);
+                                }
+
+                                100%{
+                                    filter: grayscale(0);
+                                }
+                                
+                            }
+                        }
+                    }
+                    
+                }  
+                
             }
             
             
             }
+
+            
+            
+
         }
     
 
@@ -381,7 +447,7 @@ $swiper-title-color:#DAA520;
     .slideOne{
 
         &:hover .img{
-            transform: scale(0.7);
+            transform: scale(0.9);
             filter: grayscale(0) brightness(0.8);
         }
         
@@ -440,6 +506,8 @@ $swiper-title-color:#DAA520;
             grid-column: 1/2;
             grid-row: 2/3;
             justify-self: center;
+            font-family: $main-font;
+            font-size: 16px;
         }
 
         .games{
@@ -450,12 +518,18 @@ $swiper-title-color:#DAA520;
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 16px;
-
+            font-size: 18px;
+            font-family: $main-font;
+            justify-self: self-start;
+            align-items: flex-start;
+            margin-left: 100px;
+            margin-top: 20px;
             ul{
                list-style: none;
+               padding: 0;
+
                li{
-                   font-size: 18px;
+                   font-size: 16px;
                } 
             }
         }
@@ -464,6 +538,8 @@ $swiper-title-color:#DAA520;
             grid-column: 3/4;
             grid-row: 2/3;
             justify-self: center;
+            font-family: $main-font;
+            font-size: 16px;
         }
     }
     

@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,6 +61,40 @@
   margin-left: 10px;
 }
 
+.navbar .navbar_items ul .games:hover .dropdownGames {
+  display: block;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .navbar .navbar_items li {
   list-style: none;
   font-family: "Exo", sans-serif;
@@ -105,6 +143,58 @@
   to {
     background-color: white;
     color: black;
+  }
+}
+
+.navbar .navbar_items li .dropdownGames {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 15.2%;
+  right: 0;
+  z-index: 3;
+}
+
+.navbar .navbar_items li .dropdownGames .dropdownGames_grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  height: minmax(0, auto);
+  background-color: #27272b;
+}
+
+.navbar .navbar_items li .dropdownGames .dropdownGames_grid .dropdownGames_grid_item {
+  padding: 10px;
+  margin: 0px 10px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.navbar .navbar_items li .dropdownGames .dropdownGames_grid .dropdownGames_grid_item:hover {
+  -webkit-animation: colored 1s forwards;
+          animation: colored 1s forwards;
+}
+
+@-webkit-keyframes colored {
+  0% {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  100% {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+}
+
+@keyframes colored {
+  0% {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  100% {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
   }
 }
 
@@ -375,8 +465,8 @@
 }
 
 .slideOne:hover .img {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-filter: grayscale(0) brightness(0.8);
           filter: grayscale(0) brightness(0.8);
 }
@@ -450,6 +540,8 @@ footer .contact {
   grid-row: 2/3;
   -ms-grid-column-align: center;
       justify-self: center;
+  font-family: "Exo", sans-serif;
+  font-size: 16px;
 }
 
 footer .games {
@@ -471,15 +563,23 @@ footer .games {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Exo", sans-serif;
+  justify-self: self-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 100px;
+  margin-top: 20px;
 }
 
 footer .games ul {
   list-style: none;
+  padding: 0;
 }
 
 footer .games ul li {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 footer .newsletter {
@@ -491,5 +591,7 @@ footer .newsletter {
   grid-row: 2/3;
   -ms-grid-column-align: center;
       justify-self: center;
+  font-family: "Exo", sans-serif;
+  font-size: 16px;
 }
 /*# sourceMappingURL=home.css.map */
