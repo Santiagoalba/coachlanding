@@ -31,7 +31,7 @@ body{
         width: 100%;
         background-color: #27272b;
         justify-content: center;
-        
+        cursor: pointer;
         ul{
             display: flex;
             align-items: center;
@@ -55,17 +55,22 @@ body{
             .games:hover  .dropdownGames{
                 display: block;
                 animation-name: fadeIn;
-                animation-duration: 1s;
+                animation-duration: 0.7s;
+                animation-fill-mode: forwards;
+                
             }  
             
             @keyframes fadeIn {
                 0% {
                     opacity: 0;
+                    max-height: 0;
                     transform: translateY(-20px);
                  }
                  100% {
                     opacity: 1;
+                    max-height: 100%;
                     transform: translateY(0);
+                    
                  }
             }
         }
@@ -89,7 +94,7 @@ body{
                 
                 @keyframes navTransition{
                     from{
-                        background-color: black;;
+                        background-color: black;
                         color: white;
                     }
                     to{
@@ -100,12 +105,16 @@ body{
               
                 .dropdownGames{
 
-                    display: none;
+                    // display: none;
+                    max-height: 0;
+                    overflow: hidden;
                     position: absolute;
                     width: 100%;
-                    top: 15.2%;
+                    top: 133px;
                     right: 0;
                     z-index: 3;
+                    cursor: pointer;
+                    
                    
 
                     .dropdownGames_grid{
@@ -119,6 +128,16 @@ body{
                             padding: 10px;
                             margin: 0px 10px;
                             filter:grayscale(1) ;
+                            display: flex;
+                            justify-content: center;
+
+                            a{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                text-decoration: none;
+                            }
 
                             &:hover{
                                 animation: colored 1s forwards;
@@ -131,9 +150,21 @@ body{
 
                                 100%{
                                     filter: grayscale(0);
+                                    background-color: white;
                                 }
-                                
+                               
                             }
+
+                            .gameName{
+                                font-size: 18px;
+                                font-family: $main-font;
+                                color: black;
+                                display: none;
+                            }
+                        }
+
+                        .dropdownGames_grid_item:hover .gameName{
+                            display: block;
                         }
                     }
                     
@@ -152,12 +183,13 @@ body{
 
 .swiper-main{
     height: 300px;
+    overflow: hidden;
 
     .swiper-slide{
         
         img{
             width: inherit;
-            filter: blur(1.5px);
+            
         }
     }
 
@@ -200,33 +232,6 @@ body{
 }
 
 
-// .main{
-//     position: relative;
-//     display: grid;
-//     grid-template-columns: repeat(2 , 50%);
-//     height: 50vh;
-
-//     &::before{
-//         content: '';
-//         top: 0px;
-//         right: 0px;
-//         left: 0px;
-//         bottom: 0px;
-//         position: absolute;
-//         background-image: url(../image/mainbg.jpg);
-//         background-size: cover;
-//         opacity: 0.5;
-        
-//     }
-
-//     .main_grid{
-
-//         p{
-//             color: $main-color;
-//         }
-// }
-// }
-
 .stamp{
     display: flex;
     justify-content: center;
@@ -251,9 +256,12 @@ body{
 
 .skills{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 1em;
+    grid-template-columns: repeat(4, 15%);
+    grid-column-gap: 10em;
     padding: 1em;
+    margin-left: 60px;
+    margin-right: 60px;
+    justify-content: center;
 
     .cardAnimation1{
         animation-duration: 1s;
@@ -330,6 +338,79 @@ body{
         border-bottom: 100px solid red;
     }
 
+#coach{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    background-color: #f1f1f1;
+    padding: 50px 50px;
+    justify-content: center;
+
+    .coachs_card{
+
+        border-radius: 20px;
+        border: 1px solid;
+        overflow: hidden;
+        margin: 0px 50px;
+        height: 200px;
+        display: flex;
+
+        .coachs_card_info{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+
+            .coachs_card_info_player{
+                display: flex;
+                font-size:20px ;
+                font-family:$main-font;
+                justify-content: center;
+                background-color: #27272b;
+                p{
+                    margin-left: 10px;
+                    color: white;
+                }
+
+            }
+
+            .coachs_card_info_review{
+                font-family: $main-font;
+                font-size: 12px;
+                height: 50%; 
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                
+            }
+
+            .coachs_card_info_important{
+                font-size: 16px;
+                display: flex;
+                justify-content: space-between;
+                font-family: $main-font;
+                background-color: #27272b;
+                padding: 0 10px;
+
+                p{
+                    background-color: #dd5126;
+                    color: white;
+                    padding: 5px
+
+                }
+            }
+        }
+
+        .coachs_card_img{
+
+            img{
+                height: 200px;
+                width: 100px;
+                
+            }
+        }
+    }
+
+}
 
     .swiper-container {
         
@@ -396,53 +477,6 @@ body{
             }
         }
         
-        
-
-        
-      
-
-    //   .slideOne{
-        
-    //     &:hover{
-
-    //         &::before{
-
-    //             animation-name: zoomImage;
-    //             animation-duration: 2s;
-
-    //             @keyframes zoomImage {
-    //                 from{
-                      
-    //                 }
-          
-    //                 to{
-    //                   filter: none;
-    //                   opacity: 0.5;
-    //                   transform: ;
-    //                 }
-                  
-    //           }
-  
-    //         }
-    //         }
-
-    //     &::before{
-    //         content: '';
-    //         top: 0px;
-    //         right: 0px;
-    //         bottom: 0px;
-    //         position: absolute;
-    //         background-image: url(../image/lol2.png);
-    //         background-size: cover;
-    //         width: 60%;
-    //         display: flex;
-    //         background-position-x: 100px;
-    //         filter: sepia(0.7) brightness(0.2); 
-
-            
-    //         }
-        
-    //   }
 
     .slideOne{
 
@@ -472,11 +506,11 @@ body{
             right: -350px;
             position: absolute;
             transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-            filter: grayscale(0.7) brightness(0.5);
+            filter: grayscale(0.9) brightness(0.5);
             
 
              &:hover{
-                 transform: scale(0.7);
+                 transform: scale(0.9);
              }
         }
          
