@@ -241,6 +241,10 @@ body {
   display: block;
 }
 
+.navMobile {
+  display: none;
+}
+
 .swiper-main {
   height: 300px;
   overflow: hidden;
@@ -336,6 +340,8 @@ body {
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-name: cardAnimation1;
           animation-name: cardAnimation1;
 }
@@ -371,6 +377,8 @@ body {
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-name: cardAnimation2;
           animation-name: cardAnimation2;
 }
@@ -454,14 +462,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
 }
 
 #coach .coachs_card {
   border-radius: 20px;
   border: 1px solid;
   overflow: hidden;
-  margin: 0px 50px;
-  height: 200px;
+  height: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -728,5 +737,102 @@ footer .newsletter {
       justify-self: center;
   font-family: "Exo", sans-serif;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+  .navMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 10px;
+    color: white;
+    background-color: black;
+  }
+  .navMobile span {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+  }
+  .skills {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .coach_banner {
+    background-color: #f1f1f1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .coach_banner h1 {
+    margin: 0;
+    margin-top: 10px;
+    font-family: "Exo", sans-serif;
+    font-size: 24px;
+  }
+  #coach {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    grid-gap: 1em;
+  }
+  #coach .coachs_card {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  #coach .coachs_card .coachs_card_img {
+    display: none;
+  }
+  #coach .coachs_card .coachs_card_info .coachs_card_info_player {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  #coach .coachs_card .coachs_card_info .coachs_card_info_player p {
+    font-size: 14px;
+    margin: 0;
+  }
+  #coach .coachs_card .coachs_card_info .coachs_card_info_player img {
+    height: 50%;
+  }
+  #coach .coachs_card .coachs_card_info .coachs_card_info_important p {
+    padding: 1px 10px;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 14px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .games {
+    margin-left: none;
+    margin-top: none;
+  }
+  footer .games ul {
+    display: none;
+  }
 }
 /*# sourceMappingURL=home.css.map */

@@ -179,7 +179,10 @@ body{
             
 
         }
-    
+ 
+.navMobile{
+    display: none;
+}
 
 .swiper-main{
     height: 300px;
@@ -266,6 +269,7 @@ body{
     .cardAnimation1{
         animation-duration: 1s;
         animation-fill-mode:both;
+        animation-delay: 0.5s;
         animation-name: cardAnimation1;
     }
     
@@ -283,6 +287,7 @@ body{
     .cardAnimation2{
         animation-duration: 1s;
         animation-fill-mode:both;
+        animation-delay: 0.5s;
         animation-name: cardAnimation2;
     }
     
@@ -344,14 +349,14 @@ body{
     background-color: #f1f1f1;
     padding: 50px 50px;
     justify-content: center;
+    column-gap: 1em;
 
     .coachs_card{
 
         border-radius: 20px;
         border: 1px solid;
         overflow: hidden;
-        margin: 0px 50px;
-        height: 200px;
+        height: 190px;
         display: flex;
 
         .coachs_card_info{
@@ -578,3 +583,114 @@ body{
     }
     
       
+    @media only screen and (max-width:600px){
+
+        .navbar{
+            display: none;
+        }
+
+        .navMobile{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            color: white;
+            background-color: black;
+        
+
+            span{
+                font-family: $logo-font;
+                font-size: 24px;
+            }
+
+        }
+
+        .skills{
+            grid-template-columns: 100%;
+        }
+
+        .coach_banner{
+            
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            
+            h1{
+                margin: 0;
+                margin-top:10px;
+                font-family: $main-font;
+                font-size: 24px;
+            }
+        }
+
+        #coach{
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3 , auto);
+            grid-gap: 1em;
+            
+
+            .coachs_card{
+                overflow: hidden;
+                width: 100%;
+                margin: 0;
+                height: auto;
+
+                .coachs_card_img{
+                    display: none;
+                }
+
+                .coachs_card_info{
+
+                    .coachs_card_info_player{
+
+                        align-items: center;
+                        height: auto;
+                        p{
+                            font-size: 14px;
+                            margin: 0;
+                        }
+                        
+                        img{
+                            height: 50%;
+                        }
+                    }
+
+                    .coachs_card_info_review{
+                        
+                    }
+
+                    .coachs_card_info_important{
+
+                        p{
+
+                            padding: 1px 10px;
+                            border-radius: 10px;
+                            margin: 5px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .games{
+
+                margin-left: none;
+                margin-top: none;
+
+                span{
+                    
+                }
+
+                ul{
+                    display: none;
+                }
+            }
+        }
+    }
