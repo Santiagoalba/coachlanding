@@ -123,8 +123,8 @@
           
                   </div>
                 </li>
-                <li>Sign In</li>
-                <li>Log In</li>
+                <li class="signIn" onclick="home.showPopUp()">Sign Up</li>
+                <li onclick="home.showPopUpLog()">Log In</li>
                 <button class="navbar_cta">Choose your master!</button>
             </ul>
 
@@ -134,7 +134,89 @@
 
         </div>
         
+        <div class="signInPopUp">
 
+          <div class="signInPopUp_title">
+
+            <h1>Sign up for ATYPICAL</h1>
+            <p>The best coaching experience</p>
+
+          </div>
+
+          <div class="signInForm">
+
+            <div class="signInForm_logo">ATYPICAL</div>
+
+            <form action="#" id="form">
+
+            <div class="signInForm_input">
+              <input class="boxInput" type="text" placeholder="Nick" id="nick" >
+            </div>
+            
+            <div class="signInForm_input">
+              <input class="boxInput" type="email" placeholder="Mail" id="email">
+            </div> 
+              
+            <div class="signInForm_input">
+              <input class="boxInput" type="password" placeholder="Password" id="password" >
+            </div> 
+
+            <div class="signInForm_input">
+              <input class="boxInput" type="password" placeholder="Re-type Password" id="password2">
+            </div> 
+
+            <div class="formButton">
+              <button type="submit">Sign Up</button>
+            </div>
+
+            </form>
+
+            <div id="error"></div>
+
+            <div class="account">
+              <p>Already have an account? <span onclick="home.toLogIn()"> Log In</span> </p>
+            </div>
+            <p class="signInPopUp_close" onclick="home.hidePopUp()">Close tab</p>
+          </div>
+          
+        </div>
+
+        <div class="logInPopUp">
+
+          <div class="logInPopUp_title">
+
+            <h1>Log in ATYPICAL</h1>
+            <p>The best coaching experience</p>
+
+          </div>
+
+          <div class="logInForm">
+
+            <div class="logInForm_logo">ATYPICAL</div>
+
+            <form action="#" id="form">
+
+            <div class="logInForm_input">
+              <input class="boxInput" type="text" placeholder="Nick" id="nick">
+            </div>
+              
+            <div class="logInForm_input">
+              <input class="boxInput" type="password" placeholder="Password" id="pass">
+            </div> 
+
+            <div class="formButton">
+              <button type="submit">Log In</button>
+            </div>
+
+            </form>
+
+            <div class="accountLog">
+              <p>Dont have an account? <span onclick="home.toSignUp()"> Sign Up</span> </p>
+            </div>
+            <p class="logInPopUp_close" onclick="home.hidePopUpLog()">Close tab</p>
+          </div>
+          
+        </div>
          
         
 
@@ -167,10 +249,8 @@
             
         <div class="swiper-wrapper" >
 
-          <div class="swiper-slide"><img src="image/images.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="image/images.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="image/images.jpg" alt=""></div>
-          <div class="swiper-slide"><img src="image/images.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="image/images.png" alt=""></div>
+          
           
         </div>
         <!-- Add Pagination -->
@@ -301,9 +381,9 @@
             </a>
           
       
-          <div class="newsletter">
+          <div id="newsletter">
             <p>Subscribe to newsletter!</p>
-            <form action="#" onsubmit="home.validar()">
+            <form action="#" id="form">
               <input type="email" name="email" id="newsletterEmail" placeholder="Email"  >
               <button type="submit">Registrame!</button>
             </form>

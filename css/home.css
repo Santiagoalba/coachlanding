@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  position: relative;
 }
 
 .navbar {
@@ -184,6 +185,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 195px;
 }
 
 .navbar .navbar_items li .dropdownGames .dropdownGames_grid .dropdownGames_grid_item a {
@@ -241,6 +243,161 @@ body {
   display: block;
 }
 
+.signInPopUp {
+  position: fixed;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: downwards;
+          animation-name: downwards;
+}
+
+@-webkit-keyframes downwards {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes downwards {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.signInPopUp .signInPopUp_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  font-family: "Exo", sans-serif;
+}
+
+.signInPopUp .signInPopUp_title h1 {
+  color: #dd5126;
+}
+
+.signInPopUp .signInPopUp_close {
+  margin: 0;
+  color: #6d7c90;
+  font-size: 12px;
+  font-family: "Exo", sans-serif;
+  cursor: pointer;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.signInForm {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  border-radius: 20px;
+  width: 350px;
+}
+
+.signInForm .signInForm_input {
+  margin: 10px 0;
+}
+
+.signInForm .signInForm_input input {
+  padding: 8px 0 6px 7px;
+  font-size: 14px;
+  font-family: "Exo", sans-serif;
+  width: 230px;
+}
+
+.signInForm .signInForm_logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+  color: black;
+  margin: 30px 0;
+}
+
+.signInForm .formButton button {
+  width: 100%;
+  margin: 10px 0;
+  background-color: black;
+  font-size: 16px;
+  font-family: "Exo", sans-serif;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signInForm .account p {
+  width: 350px;
+  border: 1px solid;
+  border-left: 0;
+  border-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  padding: 20px 0;
+  font-size: 16px;
+  font-family: "Exo", sans-serif;
+  text-indent: 5px;
+}
+
+.signInForm .account span {
+  font-weight: bold;
+  color: #3578e5;
+  cursor: pointer;
+}
+
 .navMobile {
   display: none;
 }
@@ -251,7 +408,8 @@ body {
 }
 
 .swiper-main .swiper-slide img {
-  width: inherit;
+  width: 100%;
+  height: auto;
 }
 
 .swiper-main .swiper-text {
@@ -450,6 +608,19 @@ body {
   position: absolute;
   border-right: 50px solid transparent;
   border-bottom: 100px solid red;
+}
+
+.coach_banner {
+  background-color: #f1f1f1;
+  font-family: "Exo", sans-serif;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coach_banner h1 {
+  margin: 0;
 }
 
 #coach {
@@ -834,5 +1005,147 @@ footer .newsletter {
   footer .games ul {
     display: none;
   }
+}
+
+.logInPopUp {
+  position: fixed;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: downwards;
+          animation-name: downwards;
+}
+
+@keyframes downwards {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.logInPopUp .logInPopUp_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  font-family: "Exo", sans-serif;
+}
+
+.logInPopUp .logInPopUp_title h1 {
+  color: #dd5126;
+}
+
+.logInPopUp .logInPopUp_close {
+  margin: 0;
+  color: #6d7c90;
+  font-size: 12px;
+  font-family: "Exo", sans-serif;
+  cursor: pointer;
+}
+
+.logInPopUp .logInForm {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  border-radius: 20px;
+  width: 350px;
+}
+
+.logInPopUp .logInForm .logInForm_input {
+  margin: 10px 0;
+}
+
+.logInPopUp .logInForm .logInForm_input input {
+  padding: 8px 0 6px 7px;
+  font-size: 14px;
+  font-family: "Exo", sans-serif;
+  width: 230px;
+}
+
+.logInPopUp .logInForm .logInForm_logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+  color: black;
+  margin: 30px 0;
+}
+
+.logInPopUp .logInForm .formButton button {
+  width: 100%;
+  margin: 10px 0;
+  background-color: black;
+  font-size: 16px;
+  font-family: "Exo", sans-serif;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logInPopUp .logInForm .accountLog p {
+  width: 350px;
+  border: 1px solid;
+  border-left: 0;
+  border-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  padding: 20px 0;
+  font-size: 16px;
+  font-family: "Exo", sans-serif;
+  text-indent: 5px;
+}
+
+.logInPopUp .logInForm .accountLog span {
+  font-weight: bold;
+  color: #3578e5;
+  cursor: pointer;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=home.css.map */

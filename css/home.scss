@@ -5,8 +5,10 @@ $main-color: white;
 $font-color: #6D7CFD;
 $swiper-title-color:#DAA520;
 
+
 body{
     margin: 0;
+    position: relative;
 }
 
 .navbar{
@@ -130,6 +132,7 @@ body{
                             filter:grayscale(1) ;
                             display: flex;
                             justify-content: center;
+                            min-height: 195px;
 
                             a{
                                 width: 100%;
@@ -179,19 +182,148 @@ body{
             
 
         }
+
+.signInPopUp {
+    
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,.9);
+    z-index: 10000;
+    animation-duration: 1s;
+    animation-fill-mode:both;
+    animation-name: downwards;
+    
+    
+    @keyframes downwards {
+        from{
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    
+
+    .signInPopUp_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        font-family: $main-font;
+
+        h1{
+            color:#dd5126;
+        }
+        
+    }
+
+    .signInPopUp_close{
+        
+        margin: 0;
+        color: #6d7c90;
+        font-size: 12px;
+        font-family: $main-font;
+        cursor: pointer;
+    }
+}
+
+.show{
+    display: flex;
+}
+
+.signInForm{
+    
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 20px;
+    width: 350px;
+
+    
+
+    .signInForm_input{
+        margin: 10px 0;
+        
+        input{
+            padding: 8px 0 6px 7px;
+            font-size: 14px;
+            font-family: $main-font;
+            width: 230px;
+        }
+
+        
+    }
+
+    .signInForm_logo{
+        font-family: $logo-font;
+        font-size: 30px;
+        color: black;
+        margin:30px 0;
+    }
+
+    .formButton{
+        
+        button{
+            width: 100%;
+            margin: 10px 0;
+            background-color: black;
+            font-size: 16px;
+            font-family: $main-font;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+
+    .account{
+
+        p{
+            width: 350px;
+            border: 1px solid;
+            border-left: 0;
+            border-right: 0;
+            display: flex;
+            justify-content: center;
+            color: black;
+            padding: 20px 0;
+            font-size: 16px;
+            font-family: $main-font;
+            text-indent: 5px;
+        }
+        
+        span{
+            font-weight: bold;
+            color: #3578e5;
+            cursor: pointer;
+        }
+    }
+}
+
+
  
 .navMobile{
     display: none;
 }
 
 .swiper-main{
-    height: 300px;
+    // height: 300px;
     overflow: hidden;
 
     .swiper-slide{
         
         img{
-            width: inherit;
+            width: 100%;
+            height: auto;
             
         }
     }
@@ -341,6 +473,17 @@ body{
         position: absolute;
         border-right: 50px solid transparent;
         border-bottom: 100px solid red;
+    }
+
+    .coach_banner{
+        background-color:#f1f1f1;
+        font-family: $main-font;
+        padding: 20px;
+        display: flex;
+
+        h1{
+            margin: 0;
+        }
     }
 
 #coach{
@@ -509,6 +652,7 @@ body{
         .img{
             top: -130px;
             right: -350px;
+            
             position: absolute;
             transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
             filter: grayscale(0.9) brightness(0.5);
@@ -694,3 +838,137 @@ body{
             }
         }
     }
+
+
+    
+.logInPopUp {
+    
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,.9);
+    z-index: 10000;
+    animation-duration: 1s;
+    animation-fill-mode:both;
+    animation-name: downwards;
+    
+    
+    @keyframes downwards {
+        from{
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    
+
+    .logInPopUp_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        font-family: $main-font;
+
+        h1{
+            color:#dd5126;
+        }
+        
+    }
+
+    .logInPopUp_close{
+        
+        margin: 0;
+        color: #6d7c90;
+        font-size: 12px;
+        font-family: $main-font;
+        cursor: pointer;
+    }
+
+    .logInForm{
+    
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        border-radius: 20px;
+        width: 350px;
+    
+        
+    
+        .logInForm_input{
+            margin: 10px 0;
+            
+            input{
+                padding: 8px 0 6px 7px;
+                font-size: 14px;
+                font-family: $main-font;
+                width: 230px;
+            }
+    
+            
+        }
+    
+        .logInForm_logo{
+            font-family: $logo-font;
+            font-size: 30px;
+            color: black;
+            margin:30px 0;
+        }
+    
+        .formButton{
+            
+            button{
+                width: 100%;
+                margin: 10px 0;
+                background-color: black;
+                font-size: 16px;
+                font-family: $main-font;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    
+        .accountLog{
+    
+            p{
+                width: 350px;
+                border: 1px solid;
+                border-left: 0;
+                border-right: 0;
+                display: flex;
+                justify-content: center;
+                color: black;
+                padding: 20px 0;
+                font-size: 16px;
+                font-family: $main-font;
+                text-indent: 5px;
+            }
+            
+            span{
+                font-weight: bold;
+                color: #3578e5;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+
+
+
+.show{
+    display: flex;
+}
+
